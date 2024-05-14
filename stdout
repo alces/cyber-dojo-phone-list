@@ -1,8 +1,9 @@
 --- FAIL: TestListWithNoSimplePrefixMatches (0.00s)
-    phone_list_test.go:17: 
-        	Error Trace:	phone_list_test.go:17
+    phone_list_test.go:18: 
+        	Error Trace:	phone_list_test.go:18
         	Error:      	Should be true
         	Test:       	TestListWithNoSimplePrefixMatches
+        	Messages:   	[911 912 913]
 FAIL
 exit status 1
 FAIL	_/sandbox	0.002s
