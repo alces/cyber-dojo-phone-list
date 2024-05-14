@@ -6,6 +6,10 @@ import (
 )
 
 func isConsistent(p []string) bool {
+    if len(p) < 2 {
+        return true
+    }
+    
     c := make([]string, len(p))
 
     for i := 0; i < len(p); i++ {
