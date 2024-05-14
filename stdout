@@ -1,3 +1,17 @@
+--- FAIL: TestCanonizeMixedString (0.00s)
+    canonizer_test.go:13: 
+        	Error Trace:	canonizer_test.go:13
+        	Error:      	Not equal: 
+        	            	expected: "1234567"
+        	            	actual  : "(123)45-67"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-1234567
+        	            	+(123)45-67
+        	Test:       	TestCanonizeMixedString
 --- FAIL: TestListWithNonnumericPrefixMatches (0.00s)
     phone_list_test.go:28: 
         	Error Trace:	phone_list_test.go:28
@@ -6,4 +20,4 @@
         	Messages:   	[911 91-101 913]
 FAIL
 exit status 1
-FAIL	_/sandbox	0.002s
+FAIL	_/sandbox	0.003s
