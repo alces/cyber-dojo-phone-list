@@ -1,2 +1,8 @@
-PASS
-ok  	_/sandbox	0.004s
+--- FAIL: TestOneElementListShouldBeConsistent (0.00s)
+    phone_list_test.go:13: 
+        	Error Trace:	phone_list_test.go:13
+        	Error:      	Should be true
+        	Test:       	TestOneElementListShouldBeConsistent
+FAIL
+exit status 1
+FAIL	_/sandbox	0.003s

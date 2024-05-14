@@ -8,3 +8,7 @@ import (
 func TestEmptyListShouldBeConsistent(t *testing.T) {
     assert.True(t, isConsistent([]string{}))
 }
+
+func TestOneElementListShouldBeConsistent(t *testing.T) {
+    assert.True(t, isConsistent([]string{"911"}))
+}
