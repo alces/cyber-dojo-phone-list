@@ -1,0 +1,8 @@
+--- FAIL: TestEmptyListShouldBeConsistent (0.00s)
+    hiker_test.go:9: 
+        	Error Trace:	hiker_test.go:9
+        	Error:      	Should be true
+        	Test:       	TestEmptyListShouldBeConsistent
+FAIL
+exit status 1
+FAIL	_/sandbox	0.003s
