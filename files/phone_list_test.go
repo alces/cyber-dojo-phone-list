@@ -12,3 +12,7 @@ func TestEmptyListShouldBeConsistent(t *testing.T) {
 func TestOneElementListShouldBeConsistent(t *testing.T) {
     assert.True(t, isConsistent([]string{"911"}))
 }
+
+func TestListWithNoSimplePrefixMatches(t *testing.T) {
+    assert.True(t, isConsistent([]string{"911", "912", "913"})
+}
