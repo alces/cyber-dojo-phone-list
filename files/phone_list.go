@@ -1,6 +1,7 @@
 package phonelist
 
 import (
+    "regexp"
     "strings"
 )
 
@@ -17,5 +18,7 @@ func isConsistent(p []string) bool {
 }
 
 func canonize(mixed string) string {
-    return mixed
+    re := regexp.MustCompilePOSIX(`\D+`)
+    
+    return string(re.ReplaceAll([]byte(mixed), []byte("")))
 }
