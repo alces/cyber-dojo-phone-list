@@ -27,3 +27,8 @@ func TestListWithNonnumericPrefixMatches(t *testing.T) {
     sample := []string{"911", "91-101", "913"}
     assert.False(t, isConsistent(sample), sample)
 }
+
+func TestListWithMixedOrder(t *testing.T) {
+    sample := []string{"91101", "911", "913"}
+    assert.False(t, isConsistent(sample), sample)
+}

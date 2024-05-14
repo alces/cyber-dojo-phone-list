@@ -1,2 +1,9 @@
-PASS
-ok  	_/sandbox	0.002s
+--- FAIL: TestListWithMixedOrder (0.00s)
+    phone_list_test.go:33: 
+        	Error Trace:	phone_list_test.go:33
+        	Error:      	Should be false
+        	Test:       	TestListWithMixedOrder
+        	Messages:   	[91101 911 913]
+FAIL
+exit status 1
+FAIL	_/sandbox	0.011s
