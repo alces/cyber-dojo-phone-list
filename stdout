@@ -1,23 +1,37 @@
 --- FAIL: TestCanonizeNumericString (0.00s)
-panic: regexp: CompilePOSIX(`\D+`): error parsing regexp: invalid escape sequence: `\D` [recovered]
-	panic: regexp: CompilePOSIX(`\D+`): error parsing regexp: invalid escape sequence: `\D`
-
-goroutine 6 [running]:
-testing.tRunner.func1.2({0x5a8f00, 0xc00004ef40})
-	/usr/local/go/src/testing/testing.go:1389 +0x24e
-testing.tRunner.func1()
-	/usr/local/go/src/testing/testing.go:1392 +0x39f
-panic({0x5a8f00, 0xc00004ef40})
-	/usr/local/go/src/runtime/panic.go:838 +0x207
-regexp.MustCompilePOSIX({0x5df6c8, 0x3})
-	/usr/local/go/src/regexp/regexp.go:328 +0xbb
-_/sandbox.canonize({0x5df65f, 0x3})
-	/sandbox/phone_list.go:21 +0x2f
-_/sandbox.TestCanonizeNumericString(0x0?)
-	/sandbox/canonizer_test.go:9 +0x2a
-testing.tRunner(0xc0001051e0, 0x5f3ae8)
-	/usr/local/go/src/testing/testing.go:1439 +0x102
-created by testing.(*T).Run
-	/usr/local/go/src/testing/testing.go:1486 +0x35f
-exit status 2
-FAIL	_/sandbox	0.006s
+    canonizer_test.go:9: 
+        	Error Trace:	canonizer_test.go:9
+        	Error:      	Not equal: 
+        	            	expected: "123"
+        	            	actual  : ""
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-123
+        	            	+
+        	Test:       	TestCanonizeNumericString
+--- FAIL: TestCanonizeMixedString (0.00s)
+    canonizer_test.go:13: 
+        	Error Trace:	canonizer_test.go:13
+        	Error:      	Not equal: 
+        	            	expected: "1234567"
+        	            	actual  : "(123)45-67"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-1234567
+        	            	+(123)45-67
+        	Test:       	TestCanonizeMixedString
+--- FAIL: TestListWithNonnumericPrefixMatches (0.00s)
+    phone_list_test.go:28: 
+        	Error Trace:	phone_list_test.go:28
+        	Error:      	Should be false
+        	Test:       	TestListWithNonnumericPrefixMatches
+        	Messages:   	[911 91-101 913]
+FAIL
+exit status 1
+FAIL	_/sandbox	0.002s

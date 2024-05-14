@@ -18,7 +18,7 @@ func isConsistent(p []string) bool {
 }
 
 func canonize(mixed string) string {
-    re := regexp.MustCompilePOSIX(`\D+`)
+    re := regexp.MustCompile("^[0-9]+")
     
     return string(re.ReplaceAll([]byte(mixed), []byte("")))
 }
