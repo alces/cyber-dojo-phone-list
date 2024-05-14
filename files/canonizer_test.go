@@ -6,5 +6,5 @@ import (
 )
 
 func TestCanonizeNumericString(t *testing.T) {
-    assert.Equals(t, "123", canonize("123"))
+    assert.Equal(t, "123", canonize("123"))
 }

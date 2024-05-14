@@ -1,2 +1,0 @@
-# _/sandbox [_/sandbox.test]
-./canonizer_test.go:9:12: undefined: assert.Equals
