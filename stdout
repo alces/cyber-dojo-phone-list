@@ -1,9 +1,25 @@
 --- FAIL: TestListWithNoSimplePrefixMatches (0.00s)
-    phone_list_test.go:18: 
-        	Error Trace:	phone_list_test.go:18
-        	Error:      	Should be true
-        	Test:       	TestListWithNoSimplePrefixMatches
-        	Messages:   	[911 912 913]
-FAIL
-exit status 1
-FAIL	_/sandbox	0.002s
+panic: interface conversion: interface {} is []string, not string [recovered]
+	panic: interface conversion: interface {} is []string, not string
+
+goroutine 21 [running]:
+testing.tRunner.func1.2({0x59f640, 0xc00009d4d0})
+	/usr/local/go/src/testing/testing.go:1389 +0x24e
+testing.tRunner.func1()
+	/usr/local/go/src/testing/testing.go:1392 +0x39f
+panic({0x59f640, 0xc00009d4d0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/stretchr/testify/assert.messageFromMsgAndArgs({0xc000046f40?, 0xc000046e70?, 0xc00011a680?})
+	/go/src/github.com/stretchr/testify/assert/assertions.go:191 +0xff
+github.com/stretchr/testify/assert.Fail({0x60c5e0, 0xc00011a680}, {0x5cce3c, 0xe}, {0xc000046f40, 0x2, 0x2})
+	/go/src/github.com/stretchr/testify/assert/assertions.go:257 +0x217
+github.com/stretchr/testify/assert.True({0x60c5e0, 0xc00011a680}, 0x3?, {0xc000034740, 0x2, 0x2})
+	/go/src/github.com/stretchr/testify/assert/assertions.go:658 +0x8e
+_/sandbox.TestListWithNoSimplePrefixMatches(0xc00011a4e0?)
+	/sandbox/phone_list_test.go:18 +0xc5
+testing.tRunner(0xc00011a680, 0x5de1f8)
+	/usr/local/go/src/testing/testing.go:1439 +0x102
+created by testing.(*T).Run
+	/usr/local/go/src/testing/testing.go:1486 +0x35f
+exit status 2
+FAIL	_/sandbox	0.004s
