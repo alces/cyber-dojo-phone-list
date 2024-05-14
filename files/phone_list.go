@@ -1,7 +1,7 @@
 package phonelist
 
 func isConsistent(plist []string) bool {
-    if len(plist) == 0 {
+    if len(plist) <= 1 {
         return true
     }
     
