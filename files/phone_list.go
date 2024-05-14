@@ -16,8 +16,12 @@ func isConsistent(p []string) bool {
         c[i] = canonize(p[i])
     }
     
-    for i := 0; i < len(p) - 1; i++ {
-        for j := i + 1; j < len(p); j++ {
+    for i := 0; i < len(p); i++ {
+        for j := 0; j < len(p); j++ {
+            if j == i {
+                continue
+            }
+            
             if strings.HasPrefix(c[j], c[i]) {
                 return false
             }
