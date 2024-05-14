@@ -235,5 +235,21 @@
       18,
       187536
     ]
+  },
+  {
+    "duration": 4.069355,
+    "colour": "amber",
+    "predicted": "red",
+    "revert_if_wrong": "off",
+    "index": 15,
+    "time": [
+      2024,
+      5,
+      14,
+      14,
+      39,
+      36,
+      8486
+    ]
   }
 ]

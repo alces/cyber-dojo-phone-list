@@ -15,3 +15,7 @@ func isConsistent(p []string) bool {
     
     return true
 }
+
+func canonize(mixed string) string {
+    return ""
+}

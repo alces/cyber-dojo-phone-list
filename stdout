@@ -1,9 +1,1 @@
---- FAIL: TestListWithNonnumericPrefixMatches (0.00s)
-    phone_list_test.go:28: 
-        	Error Trace:	phone_list_test.go:28
-        	Error:      	Should be false
-        	Test:       	TestListWithNonnumericPrefixMatches
-        	Messages:   	[911 91-101 913]
-FAIL
-exit status 1
-FAIL	_/sandbox	0.002s
+FAIL	_/sandbox [build failed]
