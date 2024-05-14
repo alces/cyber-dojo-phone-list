@@ -22,3 +22,8 @@ func TestListWithNoSimplePrefixMatches(t *testing.T) {
     sample := []string{"911", "912", "913"}
     assert.True(t, isConsistent(sample), sample)
 }
+
+func TestListWithSpacePrefixMatches(t *testing.T) {
+    sample := []string{"911", "911 01", "913"}
+    assert.False(t, isConsistent(sample), sample)
+}
