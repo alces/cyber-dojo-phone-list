@@ -23,7 +23,7 @@ func TestListWithNoSimplePrefixMatches(t *testing.T) {
     assert.True(t, isConsistent(sample), sample)
 }
 
-func TestListWithSpacePrefixMatches(t *testing.T) {
-    sample := []string{"911", "91 101", "913"}
+func TestListWithNonnumericPrefixMatches(t *testing.T) {
+    sample := []string{"911", "91-101", "913"}
     assert.False(t, isConsistent(sample), sample)
 }
