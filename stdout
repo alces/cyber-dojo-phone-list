@@ -1,1 +1,8 @@
-FAIL	_/sandbox [setup failed]
+--- FAIL: TestListWithNoSimplePrefixMatches (0.00s)
+    phone_list_test.go:17: 
+        	Error Trace:	phone_list_test.go:17
+        	Error:      	Should be true
+        	Test:       	TestListWithNoSimplePrefixMatches
+FAIL
+exit status 1
+FAIL	_/sandbox	0.002s
