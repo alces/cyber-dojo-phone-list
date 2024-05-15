@@ -1,2 +1,11 @@
-PASS
-ok  	_/sandbox	0.002s
+--- FAIL: TestContains (0.00s)
+    canonizer_test.go:45: 
+        	Error Trace:	canonizer_test.go:45
+        	Error:      	Not equal: 
+        	            	expected: true
+        	            	actual  : false
+        	Test:       	TestContains
+        	Messages:   	should be false when the element isn't found
+FAIL
+exit status 1
+FAIL	_/sandbox	0.002s
