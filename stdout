@@ -1,2 +1,23 @@
-PASS
-ok  	_/sandbox	0.004s
+--- FAIL: TestSortByLen (0.00s)
+    optimizer_test.go:19: 
+        	Error Trace:	optimizer_test.go:19
+        	Error:      	Not equal: 
+        	            	expected: []string{"4", "56", "123"}
+        	            	actual  : []string{"123", "4", "56"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,5 +1,5 @@
+        	            	 ([]string) (len=3) {
+        	            	+ (string) (len=3) "123",
+        	            	  (string) (len=1) "4",
+        	            	- (string) (len=2) "56",
+        	            	- (string) (len=3) "123"
+        	            	+ (string) (len=2) "56"
+        	            	 }
+        	Test:       	TestSortByLen
+        	Messages:   	a slice should be sorted by element length
+FAIL
+exit status 1
+FAIL	_/sandbox	0.005s
