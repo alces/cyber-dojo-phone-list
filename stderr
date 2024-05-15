@@ -1,0 +1,10 @@
+# _/sandbox [_/sandbox.test]
+./optimizer.go:9:13: undefined: b
+./optimizer.go:10:16: undefined: b
+./optimizer.go:13:13: undefined: b
+./optimizer.go:14:18: undefined: b
+./optimizer.go:17:13: undefined: b
+./optimizer.go:18:16: undefined: b
+./optimizer.go:22:12: sort.Sort(ByLen(a)) (no value) used as value
+./optimizer.go:22:22: cannot use ByLen(a) (value of type ByLen) as type sort.Interface in argument to sort.Sort:
+	ByLen does not implement sort.Interface (missing Len method)
