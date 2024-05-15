@@ -5,10 +5,17 @@ import (
     "github.com/stretchr/testify/assert"
 )
 
-func TestCanonizeNumericString(t *testing.T) {
-    assert.Equal(t, "123", canonize("123"))
+var canonizerTestResults = []struct{
+    argument string
+    expected string
+    message  string
+}{
+    {"123", "1234", "numeric string shouldn't change"},
+    {"(123) 45-67", "12345678", "all non-numeric characters should be removed"},
 }
-
-func TestCanonizeMixedString(t *testing.T) {
-    assert.Equal(t, "1234567", canonize("(123)45-67"))
+    
+func TestCanonizer(t *testing.T) {
+    for _, res := range canonizerTestResults {
+        assert.Equal(t, res.expected, canonize(res.argument), res.message)
+    }
 }
