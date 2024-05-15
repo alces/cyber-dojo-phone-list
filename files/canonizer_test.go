@@ -14,6 +14,15 @@ var canonizerTestResults = []struct{
     {"(123) 45-67", "1234567", "all non-numeric characters should be removed"},
 }
 
+var containsTestResults = []struct{
+    list     []string
+    element  string
+    expected bool
+    message  string
+}{
+    {[]string{}, "123", false, "empty slice shouldn't contain anything"},
+}
+
 var duplicateTestResults = []struct{
     argument []string
     expected []string

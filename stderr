@@ -1,3 +1,0 @@
-canonizer.go:6:5: cannot find package "golang.org/x/exp/slices" in any of:
-	/usr/local/go/src/golang.org/x/exp/slices (from $GOROOT)
-	/go/src/golang.org/x/exp/slices (from $GOPATH)

@@ -1,0 +1,21 @@
+--- FAIL: TestDeduplicate (0.00s)
+panic: runtime error: makeslice: cap out of range [recovered]
+	panic: runtime error: makeslice: cap out of range
+
+goroutine 7 [running]:
+testing.tRunner.func1.2({0x5b3000, 0x624140})
+	/usr/local/go/src/testing/testing.go:1389 +0x24e
+testing.tRunner.func1()
+	/usr/local/go/src/testing/testing.go:1392 +0x39f
+panic({0x5b3000, 0x624140})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+_/sandbox.deduplicate(...)
+	/sandbox/canonizer.go:14
+_/sandbox.TestDeduplicate(0x0?)
+	/sandbox/canonizer_test.go:43 +0xba
+testing.tRunner(0xc0001056c0, 0x5f3bd0)
+	/usr/local/go/src/testing/testing.go:1439 +0x102
+created by testing.(*T).Run
+	/usr/local/go/src/testing/testing.go:1486 +0x35f
+exit status 2
+FAIL	_/sandbox	0.004s
