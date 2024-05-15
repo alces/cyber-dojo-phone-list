@@ -9,7 +9,7 @@ func isConsistent(p []string) bool {
         return true
     }
     
-    c := deduplicate(p)
+    c := deduplicate(sortByLen(p))
 
     for i := 0; i < len(c); i++ {
         c[i] = canonize(c[i])
