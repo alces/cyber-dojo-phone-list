@@ -40,7 +40,7 @@ func TestCanonizer(t *testing.T) {
 
 func TestContains(t *testing.T) {
     for _, res := range containsTestResults {
-        assert.Equal(t, res.expected, canonize(res.argument), res.message)
+        assert.Equal(t, res.expected, contains(res.list, res.element), res.message)
     }
 }
 
