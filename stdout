@@ -1,11 +1,11 @@
 --- FAIL: TestPhoneList (0.00s)
-    phone_list_test.go:23: 
-        	Error Trace:	phone_list_test.go:23
+    phone_list_test.go:25: 
+        	Error Trace:	phone_list_test.go:25
         	Error:      	Not equal: 
         	            	expected: false
         	            	actual  : true
         	Test:       	TestPhoneList
-        	Messages:   	an incosistent list with different order should be inconsistent
+        	Messages:   	[]string{"9101", "911", "913"} - an incosistent list in different order should be inconsistent
 FAIL
 exit status 1
 FAIL	_/sandbox	0.002s
