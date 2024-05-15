@@ -4,20 +4,22 @@ import (
     "strings"
 )
 
-func isConsistent(p []string) bool {
-    if len(p) < 2 {
+func isConsistent(phoneList []string) bool {
+    if len(phoneList) < 2 {
         return true
     }
     
-    c := deduplicate(sortByLen(p))
+    sorted := sortByLen(deduplicate(phoneList))
 
-    for i := 0; i < len(c); i++ {
-        c[i] = canonize(c[i])
+    for i := 0; i < len(sorted); i++ {
+        sorted[i] = canonize(sorted[i])
     }
     
-    for i := 0; i < len(c) - 1; i++ {
-        for j := i + 1; j < len(c); j++ {            
-            if strings.HasPrefix(c[j], c[i]) {
+    cleaned := removeEmpty(sorted)
+ 
+    for i := 0; i < len(cleaned) - 1; i++ {
+        for j := i + 1; j < len(cleaned); j++ {            
+            if strings.HasPrefix(cleaned[j], cleaned[i]) {
                 return false
             }
         }
