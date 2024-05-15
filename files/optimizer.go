@@ -6,15 +6,15 @@ import (
 
 type ByLen []string
 
-func (ByLen b) Len() int {
+func (b ByLen) Len() int {
     return len(b)
 }
 
-func (ByLen b) Swap(i, j int) {
+func (b ByLen) Swap(i, j int) {
     b[i], b[j] = b[j], b[i]
 }
 
-func (ByLen b) Less(i, j int) bool {
+func (b ByLen) Less(i, j int) bool {
     return len(b[i]) < len(b[j])
 }
 
