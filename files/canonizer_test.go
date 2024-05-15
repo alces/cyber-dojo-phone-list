@@ -10,8 +10,8 @@ var canonizerTestResults = []struct{
     expected string
     message  string
 }{
-    {"123", "1234", "numeric string shouldn't change"},
-    {"(123) 45-67", "12345678", "all non-numeric characters should be removed"},
+    {"123", "123", "numeric string shouldn't change"},
+    {"(123) 45-67", "1234567", "all non-numeric characters should be removed"},
 }
     
 func TestCanonizer(t *testing.T) {
