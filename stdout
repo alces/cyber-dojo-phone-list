@@ -1,2 +1,23 @@
-PASS
-ok  	_/sandbox	0.014s
+--- FAIL: TestSortByLenPurity (0.00s)
+    optimizer_test.go:30: 
+        	Error Trace:	optimizer_test.go:30
+        	Error:      	Not equal: 
+        	            	expected: []string{"123", "4", "56"}
+        	            	actual  : []string{"4", "56", "123"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,5 +1,5 @@
+        	            	 ([]string) (len=3) {
+        	            	- (string) (len=3) "123",
+        	            	  (string) (len=1) "4",
+        	            	- (string) (len=2) "56"
+        	            	+ (string) (len=2) "56",
+        	            	+ (string) (len=3) "123"
+        	            	 }
+        	Test:       	TestSortByLenPurity
+        	Messages:   	the original slice should remain unchanged
+FAIL
+exit status 1
+FAIL	_/sandbox	0.006s

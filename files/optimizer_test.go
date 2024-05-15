@@ -20,3 +20,12 @@ func TestSortByLen(t *testing.T) {
         assert.Equal(t, res.sorted, sortByLen(res.unsorted), res.message)
     }
 }
+
+func TestSortByLenPurity(t *testing.T) {
+    unsorted := []string{"123", "4", "56"}
+    expected := []string{"123", "4", "56"}
+
+    _ = sortByLen(unsorted)
+
+    assert.Equal(t, expected, unsorted, "the original slice should remain unchanged")
+}
