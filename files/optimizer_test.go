@@ -11,6 +11,7 @@ var sortTestResults = []struct {
     sorted   []string
     message  string
 }{
+    {[]string{}, []string{}, "should work with an empty slice"},
     {[]string{"123", "4", "56"}, []string{"4", "56", "123"}, "a slice should be sorted by element length"},
 }
 
