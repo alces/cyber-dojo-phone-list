@@ -1,21 +1,11 @@
 --- FAIL: TestPhoneList (0.00s)
-panic: runtime error: index out of range [2] with length 2 [recovered]
-	panic: runtime error: index out of range [2] with length 2
-
-goroutine 24 [running]:
-testing.tRunner.func1.2({0x5cf300, 0xc0000f0228})
-	/usr/local/go/src/testing/testing.go:1389 +0x24e
-testing.tRunner.func1()
-	/usr/local/go/src/testing/testing.go:1392 +0x39f
-panic({0x5cf300, 0xc0000f0228})
-	/usr/local/go/src/runtime/panic.go:838 +0x207
-_/sandbox.isConsistent({0x737b00, 0x3, 0x5a7440?})
-	/sandbox/phone_list.go:15 +0x2ed
-_/sandbox.TestPhoneList(0x0?)
-	/sandbox/phone_list_test.go:26 +0xb3
-testing.tRunner(0xc00011a820, 0x5f3c98)
-	/usr/local/go/src/testing/testing.go:1439 +0x102
-created by testing.(*T).Run
-	/usr/local/go/src/testing/testing.go:1486 +0x35f
-exit status 2
-FAIL	_/sandbox	0.005s
+    phone_list_test.go:26: 
+        	Error Trace:	phone_list_test.go:26
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestPhoneList
+        	Messages:   	[]string{"911", "912", "911"} - duplicates shouldn't be consider incosistencies
+FAIL
+exit status 1
+FAIL	_/sandbox	0.004s

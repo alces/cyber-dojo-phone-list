@@ -11,12 +11,12 @@ func isConsistent(p []string) bool {
     
     c := deduplicate(p)
 
-    for i := 0; i < len(p); i++ {
-        c[i] = canonize(p[i])
+    for i := 0; i < len(c); i++ {
+        c[i] = canonize(c[i])
     }
     
-    for i := 0; i < len(p); i++ {
-        for j := 0; j < len(p); j++ {
+    for i := 0; i < len(c); i++ {
+        for j := 0; j < len(c); j++ {
             if j == i {
                 continue
             }
