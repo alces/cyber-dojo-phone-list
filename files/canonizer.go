@@ -33,5 +33,13 @@ func contains(slice []string, element string) bool {
 }
 
 func removeEmpty(dirty []string) []string {
-    return dirty
+    clean := make([]string, 0, len(dirty))
+    
+    for _, v := range dirty {
+        if v != "" {
+            clean = append(clean, v)
+        }
+    }
+    
+    return clean
 }
