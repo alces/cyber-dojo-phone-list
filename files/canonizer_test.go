@@ -25,7 +25,7 @@ var containsTestResults = []struct{
     {[]string{"123", "234", "345"}, "456", false, "should be false when the element isn't found"},
 }
 
-var duplicateTestResults = []struct{
+var deduplicateTestResults = []struct{
     argument []string
     expected []string
     message  string
@@ -34,6 +34,14 @@ var duplicateTestResults = []struct{
     {[]string{"123", "123", "234"}, []string{"123", "234"}, "duplicate items should be removed"},
 }
 
+var removeEmptyTestResults = []struct{
+    argument []string
+    expected []string
+    message  string
+}{
+    {[]string{"123", "", "234"}, []string{"123", "234"}, "should remove empty strings"},  
+}    
+    
 func TestCanonizer(t *testing.T) {
     for _, res := range canonizerTestResults {
         assert.Equal(t, res.expected, canonize(res.argument), res.message)
@@ -47,7 +55,13 @@ func TestContains(t *testing.T) {
 }
 
 func TestDeduplicate(t *testing.T) {
-    for _, res := range duplicateTestResults {
+    for _, res := range deduplicateTestResults {
         assert.Equal(t, res.expected, deduplicate(res.argument), res.message)
+    }
+}
+
+func TestRemoveEmpty(t *testing.T) {
+    for _, res := range removeEmptyTestResults {
+        assert.Equal(t, res.expected, removeEmpty(res.argument), res.message)
     }
 }

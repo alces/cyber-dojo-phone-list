@@ -31,3 +31,7 @@ func contains(slice []string, element string) bool {
     
     return false
 }
+
+func removeEmpty(dirty []string) []string {
+    return dirty
+}
