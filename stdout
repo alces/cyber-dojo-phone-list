@@ -42,4 +42,4 @@
         	Messages:   	the original slice should remain unchanged
 FAIL
 exit status 1
-FAIL	_/sandbox	0.003s
+FAIL	_/sandbox	0.002s
