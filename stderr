@@ -1,2 +1,0 @@
-# _/sandbox [_/sandbox.test]
-./optimizer.go:22:12: sort.Sort(ByLen(a)) (no value) used as value
