@@ -38,6 +38,12 @@ func TestCanonizer(t *testing.T) {
     }
 }
 
+func TestContains(t *testing.T) {
+    for _, res := range containsTestResults {
+        assert.Equal(t, res.expected, canonize(res.argument), res.message)
+    }
+}
+
 func TestDeduplicate(t *testing.T) {
     for _, res := range duplicateTestResults {
         assert.Equal(t, res.expected, deduplicate(res.argument), res.message)
