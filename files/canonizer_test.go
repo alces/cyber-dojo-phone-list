@@ -22,7 +22,7 @@ var containsTestResults = []struct{
 }{
     {[]string{}, "123", false, "empty slice shouldn't contain anything"},
     {[]string{"123", "234", "345"}, "234", true, "should be true when the element is found"},
-    {[]string{"123", "234", "345"}, "456", true, "should be false when the element isn't found"},
+    {[]string{"123", "234", "345"}, "456", false, "should be false when the element isn't found"},
 }
 
 var duplicateTestResults = []struct{
