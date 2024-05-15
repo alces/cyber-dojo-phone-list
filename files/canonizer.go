@@ -11,7 +11,7 @@ func canonize(mixed string) string {
 }
 
 func deduplicate(dirty []string) []string {
-    clean := make([]string, len(dirty), 0)
+    clean := make([]string, 0, len(dirty))
     
     for _, v := range dirty {
         if !contains(clean, v) {
