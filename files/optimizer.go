@@ -19,7 +19,11 @@ func (b ByLen) Less(i, j int) bool {
 }
 
 func sortByLen(a []string) []string {
-    sort.Sort(ByLen(a))
+    b := make([]string, len(a))
     
-    return a
+    _ = copy(a, b)
+    
+    sort.Sort(ByLen(b))
+    
+    return b
 }
