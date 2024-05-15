@@ -2,6 +2,7 @@ package phonelist
 
 import (
     "regexp"
+    "slices"
 )
 
 func canonize(mixed string) string {
@@ -11,5 +12,13 @@ func canonize(mixed string) string {
 }
 
 func deduplicate(dirty []string) []string {
-    return dirty
+    clean := make([]string, len(dirty), 0)
+    
+    for _, v := range dirty {
+        if !slices.Contains(clean, v) {
+            clean = append(clean, v)
+        }
+    }
+    
+    return clean
 }
