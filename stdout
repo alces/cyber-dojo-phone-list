@@ -1,6 +1,6 @@
 --- FAIL: TestDeduplicate (0.00s)
-    canonizer_test.go:33: 
-        	Error Trace:	canonizer_test.go:33
+    canonizer_test.go:34: 
+        	Error Trace:	canonizer_test.go:34
         	Error:      	Not equal: 
         	            	expected: []string{"123", "234"}
         	            	actual  : []string{"123", "123", "234"}
@@ -17,4 +17,4 @@
         	Messages:   	duplicate items should be removed
 FAIL
 exit status 1
-FAIL	_/sandbox	0.006s
+FAIL	_/sandbox	0.003s

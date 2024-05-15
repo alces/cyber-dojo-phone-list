@@ -19,6 +19,7 @@ var duplicateTestResults = []struct{
     expected []string
     message  string
 }{
+    {[]string{"123", "234"}, []string{"123", "234"}, "list with no duplicates should remain the same"},
     {[]string{"123", "123", "234"}, []string{"123", "234"}, "duplicate items should be removed"},
 }
 
