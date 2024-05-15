@@ -21,6 +21,7 @@ var containsTestResults = []struct{
     message  string
 }{
     {[]string{}, "123", false, "empty slice shouldn't contain anything"},
+    {[]string{"123", "234", "345"}, "234", true, "should be true when the element is found"},
 }
 
 var duplicateTestResults = []struct{
