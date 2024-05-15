@@ -19,6 +19,8 @@ var phoneListTestResults = []struct {
     {[]string{"911", "91-101", "913", "9-14 55"}, false, "a list with matches after canonization should be inconsistent"},
     {[]string{"91101", "912", "911", "913"}, false, "an incosistent list in different order should be inconsistent"},
     {[]string{"911", "912", "911", "913"}, true, "duplicates shouldn't be considered incosistencies"},
+    {[]string{"911", "", "91-101", "Bob", "913", "9-14 55"}, false, "should ignore empty elements and be inconsistent"},
+    {[]string{"912", "", "91-101", "Bob", "913", "9-14 55"}, true, "should ignore empty elements and be consistent"},
 }
 
 func TestPhoneList(t *testing.T) {
