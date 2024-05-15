@@ -5,30 +5,21 @@ import (
     "github.com/stretchr/testify/assert"
 )
 
-func TestEmptyListShouldBeConsistent(t *testing.T) {
-    assert.True(t, isConsistent([]string{}))
+var phoneListTestResults = []struct {
+    list     []string
+    expected bool
+    message  string
+}{
+    {[]string{}, true, "empty list should be consistent"},
+    {[]string{"911"}, true, "one-element list should be consistent"},
+    {[]string{"911", "91101", "913"}, false, "a list with literal matches should be inconsistent"},
+    {[]string{"911", "912", "913"}, true, "a list with no matches should be consistent"},
+    {[]string{"911", "91-101", "913"}, false, "a list with matches after canonization should be inconsistent"},
+    {[]string{"91101", "911", "913"}, false, "an incosistent list with different order should be inconsistent"},
 }
 
-func TestOneElementListShouldBeConsistent(t *testing.T) {
-    assert.True(t, isConsistent([]string{"911"}))
-}
-
-func TestListWithSimplePrefixMatches(t *testing.T) {
-    sample := []string{"911", "91101", "913"}
-    assert.False(t, isConsistent(sample), sample)
-}
-
-func TestListWithNoSimplePrefixMatches(t *testing.T) {
-    sample := []string{"911", "912", "913"}
-    assert.True(t, isConsistent(sample), sample)
-}
-
-func TestListWithNonnumericPrefixMatches(t *testing.T) {
-    sample := []string{"911", "91-101", "913"}
-    assert.False(t, isConsistent(sample), sample)
-}
-
-func TestListWithMixedOrder(t *testing.T) {
-    sample := []string{"91101", "911", "913"}
-    assert.False(t, isConsistent(sample), sample)
+func TestPhoneList(t *testing.T) {
+    for _, res := range phoneListTestResults {
+        assert.Equal(t, res.expected, isConsistent(res.list), res.message)
+    }
 }
