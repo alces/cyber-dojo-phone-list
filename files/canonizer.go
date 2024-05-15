@@ -2,7 +2,8 @@ package phonelist
 
 import (
     "regexp"
-    "slices"
+
+    "golang.org/x/exp/slices"
 )
 
 func canonize(mixed string) string {
